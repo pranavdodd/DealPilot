@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "DealPilot",
+    "version": "1.0.0",
+    "description": "Fetch funding + tech stack from LinkedIn",
+    "permissions": ["tabs","activeTab"],
+    "host_permissions": ["*://*.linkedin.com/*"],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
