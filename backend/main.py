@@ -36,7 +36,7 @@ async def scrape(request: Request):
 
 # 4) Helpers
 async def _get_crunchbase(slug: str, client: httpx.AsyncClient):
-    url = f"https://api.crunchbase.com/api/v4/entities/organizations/{slug}?card_ids=funding_rounds"
+    url= f"https://api.crunchbase.com/api/v4/entities/organizations/{slug}?card_ids=funding_rounds"
     r = await client.get(url, headers={"X-cb-user-key": CB_KEY}, timeout=10)
     if r.status_code != 200:
         return {"error": f"Crunchbase {r.status_code}"}
