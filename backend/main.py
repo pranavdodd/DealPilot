@@ -46,7 +46,7 @@ async def _get_crunchbase(slug: str, client: httpx.AsyncClient):
     return {
         "name": props.get("name"),
         "total_funding_usd": props.get("total_funding_usd"),
-        "rounds_count": len(rounds),
+        "rounds_count":len(rounds),
         "latest_round": rounds[0] if rounds else None
     }
 
